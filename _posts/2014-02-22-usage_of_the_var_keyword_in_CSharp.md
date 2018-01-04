@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Usage of the "var" keyword in C#
-tags: [CSharp]
+tags: [csharp]
 fullview: true
 ---
 

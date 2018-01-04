@@ -1,4 +1,4 @@
 ---
-slug: test_automation
+slug: testAutomation
 name: Test Automation
 ---

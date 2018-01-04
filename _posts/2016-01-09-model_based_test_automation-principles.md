@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Model based test automation - principles
-tags: [test automation, page object]
+tags: [testAutomation, pageObject]
 excerpt_separator: <!--more-->
 ---
 

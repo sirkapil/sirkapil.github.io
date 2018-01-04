@@ -1,4 +1,4 @@
 ---
-slug: page_object
+slug: pageObject
 name: Page Object
 ---

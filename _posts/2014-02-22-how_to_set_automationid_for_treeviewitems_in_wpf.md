@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to set AutomationId for TreeViewItems in WPF
-tags: [CSharp, WPF]
+tags: [csharp, wpf]
 fullview: true
 ---
 

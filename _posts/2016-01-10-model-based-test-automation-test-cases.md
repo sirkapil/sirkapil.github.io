@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Model based test automation - test cases
-tags: [test automation, page object]
+tags: [testAutomation, pageObject]
 excerpt_separator: <!--more-->
 ---
 
