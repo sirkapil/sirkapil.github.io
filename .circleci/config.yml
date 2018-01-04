@@ -5,6 +5,8 @@ jobs:
       - image: circleci/ruby:2.4.3
     steps:
       - checkout
+      - run: apt-get update
+      - run: apt-get install npm
       - run: ./bin/setup
       - run: bundle exec jekyll build
       - run: rm -R ./_site/node_modules
