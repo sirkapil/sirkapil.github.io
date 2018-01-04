@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.3
+    steps:
+      - checkout
+      - run: ./bin/setup
+      - run: bundle exec jekyll build
+      - run: rm -R ./_site/node_modules
+      - run: bundle exec htmlproofer ./_site --only-4xx --allow-hash-href --assume-extension --check-opengraph --url-ignore "feed.xml"
