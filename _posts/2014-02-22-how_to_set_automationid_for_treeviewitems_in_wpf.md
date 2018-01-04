@@ -51,4 +51,4 @@ In the Value property's value there is a binding to the Text property of the sto
 
 In the line 10-19 there is an other solution commented out. In this way we can concatenate two property's value. With the previous example the Id now would be "Foo-Foo". You can inspect the AutomationId of a GUI element with various programs, like Snoop or Inspect (in the Windows SDK).
 
-[Example project on GitHub](https://github.com/cSE-/ExampleProjects/ItemTemplatePropertySetting)
+[Example project on GitHub](https://github.com/cmakara/ExampleProjects)
