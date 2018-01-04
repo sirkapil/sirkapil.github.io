@@ -4,7 +4,6 @@ paginate: 10
 url: https://cmakara.github.io/blog
 
 about_enabled: true
-baseurl: /blog
 # discus_identifier:
 # ga_analytics:
 local_fonts: false
