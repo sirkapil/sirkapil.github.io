@@ -7,11 +7,11 @@ layout: default
     {% for post in site.tags[page.slug] %}
       <li class="article-list-item {% if site.scrollappear_enabled %}scrollappear{% endif %}">
         <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
-          <h5>{{ post.title }}</h5>
+          <h1>{{ post.title }}</h1>
         </a>
         <p>
           {% if post.description %}
-            {{ post.description }}  
+            {{ post.description }}
           {% else %}
             {{ post.excerpt }}
           {% endif %}

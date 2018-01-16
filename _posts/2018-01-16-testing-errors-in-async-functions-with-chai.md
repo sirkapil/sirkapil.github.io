@@ -9,8 +9,6 @@ Testing errors in async code which uses promises with Chai can be a bit of a has
 
 <!--more-->
 
-Take a look at the following example:
-
 {% highlight javascript linenos=table%}
 /* eslint-env jest */
 
