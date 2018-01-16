@@ -27,7 +27,7 @@
       a {
         display: inline-block;
         padding-top: 6px;
-        font-size: 11px;
+        font-size: $base-font-size;
         font-weight: 600;
         letter-spacing: .1em;
         color: $gray;
@@ -80,7 +80,7 @@
   p {
     display: block;
     margin: 12px 0 10px;
-    font-size: 15px;
+    font-size: $base-font-size;
     color: $article-header-description-color;
   }
 }

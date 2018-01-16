@@ -42,6 +42,10 @@
     <link rel="icon" type="image/x-icon" href="{% asset favicon-dark.ico @path %}">
     <link rel="apple-touch-icon" href="{% asset apple-touch-icon-dark.png @path %}">
     {% asset blue-yellow.css %}
+  {% elsif site.blog_theme == "grey-yellow" %}
+    <link rel="icon" type="image/x-icon" href="{% asset favicon-dark.ico @path %}">
+    <link rel="apple-touch-icon" href="{% asset apple-touch-icon-dark.png @path %}">
+    {% asset grey-yellow.css %}
   {% else %}
     <link rel="icon" type="image/x-icon" href="{% asset favicon-dark.ico @path %}">
     <link rel="apple-touch-icon" href="{% asset apple-touch-icon-dark.png @path %}">
