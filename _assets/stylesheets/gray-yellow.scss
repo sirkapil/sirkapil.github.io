@@ -11,20 +11,20 @@ $yellow-darkest: #FFCC00;
 $yellow-darker: lighten($yellow-darkest, 15);
 $yellow: lighten($yellow-darkest, 45);
 
-$blue-darkest: #242424;
-$blue-darker: lighten($blue-darkest, 15);
-$blue-dark: lighten($blue-darkest, 30);
-$blue: lighten($blue-darkest, 45);
-$blue-light: lighten($blue-darkest, 60);
-$blue-lighter: lighten($blue-darkest, 75);
-$blue-lightest: lighten($blue-darkest, 85);
+$gray-darkest: #242424;
+$gray-darker: lighten($gray-darkest, 15);
+$gray-dark: lighten($gray-darkest, 30);
+$gray: lighten($gray-darkest, 45);
+$gray-light: lighten($gray-darkest, 60);
+$gray-lighter: lighten($gray-darkest, 75);
+$gray-lightest: lighten($gray-darkest, 85);
 $white: #fff;
 
 // Font colors
 
-$base-font-color: $blue-lighter;
+$base-font-color: $gray-lighter;
 $base-accent-color: $yellow-darkest;
-$base-accent-highlighted-color: darken($base-accent-color, 15);
+$base-accent-highlighted-color: orange;
 
 // Border color
 
@@ -32,16 +32,16 @@ $base-border-color: $yellow-darkest;
 
 // Page specific colors
 
-$body-background: $blue-darkest;
+$body-background: $gray-darkest;
 $header-logo-color: $yellow-darkest;
-$header-link-color: $yellow-darker;
-$header-link-color-hover: $yellow;
+$header-link-color: $base-accent-color;
+$header-link-color-hover: $base-accent-highlighted-color;
 $article-header-title-color: $base-font-color;
-$article-header-description-color: $blue-lighter;
+$article-header-description-color: $gray-lighter;
 $article-post-titles-color: $yellow-darker;
-$article-footer-color: $blue-dark;
-$article-footer-link-color: $blue-light;
-$article-footer-link-color-hover: $yellow-darker;
+$article-footer-color: $gray;
+$article-footer-link-color: $base-accent-color;
+$article-footer-link-color-hover: $base-accent-highlighted-color;
 $article-paginator-color-hover: $yellow-darker;
 
 // Imports

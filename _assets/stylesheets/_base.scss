@@ -53,7 +53,10 @@ h1 {
   font-size: $base-font-size * 1.6;
   font-weight: bold;
   letter-spacing: -.03em;
-  color: $article-header-title-color;
+  color: $base-accent-color;
+  &:hover {
+    color: $base-accent-highlighted-color
+  }
 }
 
 h2 {
