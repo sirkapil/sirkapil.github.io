@@ -7,9 +7,9 @@ title: "Blog"
   {% for post in paginator.posts %}
     <li class="article-list-item {% if site.scrollappear_enabled %}scrollappear{% endif %}">
       <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
-        <h1>
+        <h2>
           {{ post.title }}
-        </h1>
+        </h2>
       </a>
       <p>
         {% if post.description %}
