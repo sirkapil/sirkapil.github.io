@@ -1,7 +1,7 @@
 blog_theme: gray-yellow
 name: cmakara
 paginate: 10
-url: https://cmakara.github.io/blog
+url: https://cmakara.github.io
 
 about_enabled: true
 # discus_identifier:
