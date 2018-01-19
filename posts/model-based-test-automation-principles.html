@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>cmakara | Model based test automation - principles</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="ulCvpN2cjuu38o8fi2xhWTgzg8S9pKxKWbX5pCAfFuk">
+
+  <meta property="og:title" content="Model based test automation - principles">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cmakara.github.io/posts/model-based-test-automation-principles">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="cmakara">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://cmakara.github.io/posts/model-based-test-automation-principles">
+  <meta name="twitter:title" content="Model based test automation - principles">
+  <meta name="twitter:description" content="">
+
+  
+    <meta property="og:image" content="https://cmakara.github.io/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+    <meta name="twitter:image" content="https://cmakara.github.io/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+  
+
+  <link href="https://cmakara.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="cmakara Last 10 blog posts">
+
+  
+
+  
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-dark-11327753546b2135c989eee5cd83497a2734b702928d016839d795f6c706e3d5.ico">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-dark-d161409442b7e523089f24d08d0a55951549ece7504207c376d53b020713494d.png">
+    <link rel="stylesheet" type="text/css" href="/assets/gray-yellow-13d344a5b51737c0c486c1108e25c2f5f038ce3d6a978b4b7a736545a9e75340.css">
+  
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <h1>
+    <a href="/" class="header-logo" title="cmakara">cmakara</a>
+    <ul class="header-links">
+      
+        <li>
+          <a href="/about" title="About me">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-about">
+  <use href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about" xlink:href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about"></use>
+</svg>
+
+          </a>
+        </li>
+      
+      
+      
+      
+      
+        <li>
+          <a href="https://github.com/cmakara" rel="noreferrer noopener" target="_blank" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+          </a>
+        </li>
+      
+      
+      
+      
+      
+      
+      
+        <li>
+          <a href="https://www.linkedin.com/in/csabamakara" rel="noreferrer noopener" target="_blank" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-linkedin">
+  <use href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin" xlink:href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin"></use>
+</svg>
+
+          </a>
+        </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li>
+          <a href="mailto:csaba.makara@booom.studio" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-email">
+  <use href="/assets/email-782473193bf750036fdb90e8daa075508a20509d01854c09f3237c144a3f0601.svg#icon-email" xlink:href="/assets/email-782473193bf750036fdb90e8daa075508a20509d01854c09f3237c144a3f0601.svg#icon-email"></use>
+</svg>
+
+          </a>
+        </li>
+      
+      
+        <li>
+          <a href="/feed.xml" rel="noreferrer noopener" target="_blank" title="RSS">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
+  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+</svg>
+
+          </a>
+        </li>
+      
+    </ul>
+  </h1>
+</nav>
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h2>Model based test automation - principles</h2>
+            <p></p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                January 9, 2016
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  2 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+                  <a href="/tag/testautomation">testautomation</a>
+                
+                  <a href="/tag/pageobject">pageobject</a>
+                
+              </div>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <p>The topic of test automation frameworks is huge. All of its aspects are worth many pages of conversation. Below I tried to collect the general principles I find useful and desired to almost any (model based) test automation framework regardless of the specific details of them.</p>
+
+<p>One source of the historical overview of test automation frameworks is <a href="http://www.simplytesting.com/Downloads/Kent%20-%20From%20Rec-Playback%20To%20FrameworksV1.0.pdf">this paper</a> from John Kent. It does worth reading to see how we’ve got to the model-based automation.</p>
+
+<!--more-->
+
+<p>###General Principles</p>
+
+<h4 id="test-code-is-product-code">Test code is product code.</h4>
+<p>If it does not get treated like it, eventually the maintenance cost becomes much much greater than the benefit of having the tests.</p>
+
+<h4 id="the-same-basic-programmingarchitecturing-principles-have-to-be-applied-to-the-test-codebase-as-to-any-product-codebases">The same basic programming/architecturing principles have to be applied to the test codebase as to any product codebases.</h4>
+<ul>
+  <li>The code should be DRY (Don’t Repeat Yourself): code duplications should be punished by fire and death</li>
+  <li>Promote the code reusability</li>
+  <li>The code base has to have a structure, layers to it</li>
+  <li>Refactor, Refactor, Refactor: it has its cost, but it is inevitable on the long run.</li>
+</ul>
+
+<h4 id="the-code-implementing-the-test-scenario-should-be-entirely-separated-from-the-code-which-defines-the-interaction-with-the-target-application">The code implementing the test scenario should be entirely separated from the code which defines the interaction with the target application</h4>
+<ul>
+  <li>Following this principle there will be at least two separate layer defined in the architecture (tests, interaction code)</li>
+</ul>
+
+<h4 id="the-tests-should-only-use-a-well-defined-api-of-the-interaction-code">The tests should only use a well defined API of the interaction code</h4>
+<ul>
+  <li>Combined with the separation principle above, this enables the test and interaction code development the be separate processes.</li>
+  <li>This will create an N:1 relation between the tests and the interaction code. The happy consequence is that if the target application changes without the requirements change, there is only the interaction code needed to be changed</li>
+</ul>
+
+<h4 id="version-control-the-tests-model-code-and-the-target-application-together">Version control the tests, model code and the target application together</h4>
+<ul>
+  <li>If the tests and the application are not versioned together it gives an accumulative maintenance cost to be able to identify that which version of the tests are compatible with which version of the application under test.</li>
+</ul>
+
+<h4 id="the-test-case-should-be-as-readable-as-possible">The test case should be as readable as possible</h4>
+<ul>
+  <li>See the <a href="/posts/model-based-test-automation-test-cases">next blog entry</a>.</li>
+</ul>
+
+<h4 id="the-name-of-the-test-case-should-describe-entirely-the-scenario-the-case-is-implemented-for">The name of the test case should describe entirely the scenario the case is implemented for</h4>
+<ul>
+  <li>If the case does too much to be able to capture it in the name of the function it’s a good sign that the case should be divided into multiples.</li>
+  <li>Having a structure like targetName_scenarioAndInput_expectedResult in the test case naming helps a lot. For example ElementDeletion_NotEmptyElement_AsksForConfirmation</li>
+</ul>
+
+<p>It is intentional that I did not write “UI testing” anywhere. These principles can be used for any testing level like unit, integration, system or UI.</p>
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=Model+based+test+automation+-+principles%20-%20https://cmakara.github.io/posts/model-based-test-automation-principles" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewbox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"></path></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://cmakara.github.io/posts/model-based-test-automation-principles" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewbox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"></path></svg>
+            </a>
+            <a href="https://plus.google.com/share?url=https://cmakara.github.io/posts/model-based-test-automation-principles" title="Share on Google+" rel="noreferrer noopener" target="_blank">
+              <svg viewbox="0 0 128 128"><path d="M40.7 55.9v16.1c0 0 15.6 0 22 0C59.2 82.5 53.8 88.2 40.7 88.2c-13.3 0-23.7-10.8-23.7-24.2s10.4-24.2 23.7-24.2c7.1 0 11.6 2.5 15.8 5.9 3.3-3.3 3.1-3.8 11.6-11.9 -7.2-6.6-16.8-10.6-27.4-10.6C18.2 23.3 0 41.5 0 64c0 22.5 18.2 40.7 40.7 40.7 33.6 0 41.8-29.3 39-48.8H40.7zM113.9 56.7V42.6h-10.1v14.1H89.4v10.1h14.5v14.5h10.1V66.8H128V56.7H113.9z"></path></svg>
+            </a>
+          </div>
+
+          
+        </article>
+        <footer class="footer scrollappear">
+  <p align="right">
+    Customized by <a href="/about" title="About me"><b>Csaba Makara</b></a>
+    <br>
+    Based on <a href="https://github.com/nielsenramon/chalk" rel="noreferrer noopener" target="_blank" title="Download Chalk">Chalk</a>
+    by <a href="https://github.com/nielsenramon" rel="noreferrer noopener" target="_blank" title="Nielsen Ramon"><b>Nielsen Ramon</b></a>
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112479545-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-112479545-1');
+  </script>
+
+
+<script type="text/javascript" src="/assets/vendor-268c7ae814c16b5b0e479d3d34c0d1ff58337e15696af4994e19dd21d116eaa5.js"></script>
+
+
+  <script type="text/javascript" src="/assets/webfonts-e3010885de8c083c4b2935d463b1649e8796191a66a1b43bb87ef04bbcce420d.js"></script>
+
+
+
+  <script type="text/javascript" src="/assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js"></script>
+
+
+<script type="text/javascript" src="/assets/application-cd43a7f9bd8a08997bb19229cd040e7129ede0a1adf77c693b5835c9f8c2a4b1.js"></script>
+
+</body>
+</html>

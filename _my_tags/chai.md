@@ -1,4 +1,0 @@
----
-slug: chai
-name: Chai
----

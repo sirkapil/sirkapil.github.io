@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>cmakara | How to set AutomationId for TreeViewItems in WPF</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="ulCvpN2cjuu38o8fi2xhWTgzg8S9pKxKWbX5pCAfFuk">
+
+  <meta property="og:title" content="How to set AutomationId for TreeViewItems in WPF">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cmakara.github.io/posts/how-to-set-automationid-for-treeviewitems-in-wpf">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="cmakara">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://cmakara.github.io/posts/how-to-set-automationid-for-treeviewitems-in-wpf">
+  <meta name="twitter:title" content="How to set AutomationId for TreeViewItems in WPF">
+  <meta name="twitter:description" content="">
+
+  
+    <meta property="og:image" content="https://cmakara.github.io/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+    <meta name="twitter:image" content="https://cmakara.github.io/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+  
+
+  <link href="https://cmakara.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="cmakara Last 10 blog posts">
+
+  
+
+  
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-dark-11327753546b2135c989eee5cd83497a2734b702928d016839d795f6c706e3d5.ico">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-dark-d161409442b7e523089f24d08d0a55951549ece7504207c376d53b020713494d.png">
+    <link rel="stylesheet" type="text/css" href="/assets/gray-yellow-13d344a5b51737c0c486c1108e25c2f5f038ce3d6a978b4b7a736545a9e75340.css">
+  
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <h1>
+    <a href="/" class="header-logo" title="cmakara">cmakara</a>
+    <ul class="header-links">
+      
+        <li>
+          <a href="/about" title="About me">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-about">
+  <use href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about" xlink:href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about"></use>
+</svg>
+
+          </a>
+        </li>
+      
+      
+      
+      
+      
+        <li>
+          <a href="https://github.com/cmakara" rel="noreferrer noopener" target="_blank" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+          </a>
+        </li>
+      
+      
+      
+      
+      
+      
+      
+        <li>
+          <a href="https://www.linkedin.com/in/csabamakara" rel="noreferrer noopener" target="_blank" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-linkedin">
+  <use href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin" xlink:href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin"></use>
+</svg>
+
+          </a>
+        </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li>
+          <a href="mailto:csaba.makara@booom.studio" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-email">
+  <use href="/assets/email-782473193bf750036fdb90e8daa075508a20509d01854c09f3237c144a3f0601.svg#icon-email" xlink:href="/assets/email-782473193bf750036fdb90e8daa075508a20509d01854c09f3237c144a3f0601.svg#icon-email"></use>
+</svg>
+
+          </a>
+        </li>
+      
+      
+        <li>
+          <a href="/feed.xml" rel="noreferrer noopener" target="_blank" title="RSS">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
+  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+</svg>
+
+          </a>
+        </li>
+      
+    </ul>
+  </h1>
+</nav>
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h2>How to set AutomationId for TreeViewItems in WPF</h2>
+            <p></p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                February 22, 2014
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  2 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+                  <a href="/tag/csharp">csharp</a>
+                
+                  <a href="/tag/wpf">wpf</a>
+                
+              </div>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <p>Recently I started to implement UI tests for a WPF application with White. I’m entirely new to WPF, so it wasn’t obvious to me how can I set the AutomationId of a TreeViewItem which is generated during runtime based on the contained object’s property.
+Here’s the solution:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td>
+<td class="code"><pre><span class="nt">&lt;Window</span> <span class="na">x:Class=</span><span class="s">"ItemTemplatePropertySetting.MainWindow"</span>
+        <span class="na">xmlns=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span>
+        <span class="na">xmlns:x=</span><span class="s">"http://schemas.microsoft.com/winfx/2006/xaml"</span>
+        <span class="na">Title=</span><span class="s">"MainWindow"</span> <span class="na">Height=</span><span class="s">"350"</span> <span class="na">Width=</span><span class="s">"525"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;Grid&gt;</span>
+        <span class="nt">&lt;TreeView</span> <span class="na">Name=</span><span class="s">"treeView"</span> <span class="na">ItemsSource=</span><span class="s">"{Binding RootNode.Children}"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;TreeView.ItemContainerStyle&gt;</span>
+                <span class="nt">&lt;Style</span> <span class="na">TargetType=</span><span class="s">"{x:Type TreeViewItem}"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;Setter</span> <span class="na">Property=</span><span class="s">"AutomationProperties.AutomationId"</span> <span class="na">Value=</span><span class="s">"{Binding Text, StringFormat={}{0}Node}"</span><span class="nt">/&gt;</span>
+                    <span class="c">&lt;!--
+                    &lt;Setter Property="AutomationProperties.AutomationId"&gt;
+                        &lt;Setter.Value&gt;
+                            &lt;MultiBinding StringFormat="{}{0}-{1}"&gt;
+                                &lt;Binding Path="Text" /&gt;
+                                &lt;Binding Path="Text" /&gt;
+                            &lt;/MultiBinding&gt;
+                        &lt;/Setter.Value&gt;
+                    &lt;/Setter&gt;
+                    --&gt;</span>
+                <span class="nt">&lt;/Style&gt;</span>
+            <span class="nt">&lt;/TreeView.ItemContainerStyle&gt;</span>
+            <span class="nt">&lt;TreeView.ItemTemplate&gt;</span>
+                <span class="nt">&lt;HierarchicalDataTemplate</span> <span class="na">ItemsSource=</span><span class="s">"{Binding Children}"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;TextBlock</span> <span class="na">Text=</span><span class="s">"{Binding Text}"</span> <span class="na">VerticalAlignment=</span><span class="s">"Center"</span> <span class="na">Margin=</span><span class="s">"0,0,2,0"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;/HierarchicalDataTemplate&gt;</span>
+            <span class="nt">&lt;/TreeView.ItemTemplate&gt;</span>
+        <span class="nt">&lt;/TreeView&gt;</span>
+    <span class="nt">&lt;/Grid&gt;</span>
+<span class="nt">&lt;/Window&gt;</span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>This is a simple WPF Window with a TreeView control in it. We have a TreeView.ItemContainerStlye definition in line 8. All objects in the tree will have TreeViewItem as it’s container.
+The key line is the 9th. With this Setter we can define the AutomationId’s “format” and this will be applied for all TreeViewItems.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre><span class="nt">&lt;Setter</span> <span class="na">Property=</span><span class="s">"AutomationProperties.AutomationId"</span> <span class="na">Value=</span><span class="s">"{Binding Text, StringFormat={}{0}Node}"</span><span class="nt">/&gt;</span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>In the Value property’s value there is a binding to the Text property of the stored object. If the stored object’s Text property’s value is “Foo”, the TreeViewItem’s AutomationId would be “FooNode” with the applied StringFormat. The first {} after the = sign is for escaping the {0} in the format string. If the right side of the = sign would start with a normal character, we wouldn’t need the to escape it.</p>
+
+<p>In the line 10-19 there is an other solution commented out. In this way we can concatenate two property’s value. With the previous example the Id now would be “Foo-Foo”. You can inspect the AutomationId of a GUI element with various programs, like Snoop or Inspect (in the Windows SDK).</p>
+
+<p><a href="https://github.com/cmakara/ExampleProjects">Example project on GitHub</a></p>
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=How+to+set+AutomationId+for+TreeViewItems+in+WPF%20-%20https://cmakara.github.io/posts/how-to-set-automationid-for-treeviewitems-in-wpf" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewbox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"></path></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://cmakara.github.io/posts/how-to-set-automationid-for-treeviewitems-in-wpf" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewbox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"></path></svg>
+            </a>
+            <a href="https://plus.google.com/share?url=https://cmakara.github.io/posts/how-to-set-automationid-for-treeviewitems-in-wpf" title="Share on Google+" rel="noreferrer noopener" target="_blank">
+              <svg viewbox="0 0 128 128"><path d="M40.7 55.9v16.1c0 0 15.6 0 22 0C59.2 82.5 53.8 88.2 40.7 88.2c-13.3 0-23.7-10.8-23.7-24.2s10.4-24.2 23.7-24.2c7.1 0 11.6 2.5 15.8 5.9 3.3-3.3 3.1-3.8 11.6-11.9 -7.2-6.6-16.8-10.6-27.4-10.6C18.2 23.3 0 41.5 0 64c0 22.5 18.2 40.7 40.7 40.7 33.6 0 41.8-29.3 39-48.8H40.7zM113.9 56.7V42.6h-10.1v14.1H89.4v10.1h14.5v14.5h10.1V66.8H128V56.7H113.9z"></path></svg>
+            </a>
+          </div>
+
+          
+        </article>
+        <footer class="footer scrollappear">
+  <p align="right">
+    Customized by <a href="/about" title="About me"><b>Csaba Makara</b></a>
+    <br>
+    Based on <a href="https://github.com/nielsenramon/chalk" rel="noreferrer noopener" target="_blank" title="Download Chalk">Chalk</a>
+    by <a href="https://github.com/nielsenramon" rel="noreferrer noopener" target="_blank" title="Nielsen Ramon"><b>Nielsen Ramon</b></a>
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112479545-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-112479545-1');
+  </script>
+
+
+<script type="text/javascript" src="/assets/vendor-268c7ae814c16b5b0e479d3d34c0d1ff58337e15696af4994e19dd21d116eaa5.js"></script>
+
+
+  <script type="text/javascript" src="/assets/webfonts-e3010885de8c083c4b2935d463b1649e8796191a66a1b43bb87ef04bbcce420d.js"></script>
+
+
+
+  <script type="text/javascript" src="/assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js"></script>
+
+
+<script type="text/javascript" src="/assets/application-cd43a7f9bd8a08997bb19229cd040e7129ede0a1adf77c693b5835c9f8c2a4b1.js"></script>
+
+</body>
+</html>

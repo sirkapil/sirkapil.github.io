@@ -1,20 +1,58 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom" xmlns:dc="https://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.path | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>cmakara</title>
+    <description></description>
+    <link>https://cmakara.github.io</link>
+    <atom:link href="https://cmakara.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        <title>Triggering CircleCI builds from tags</title>
+        <description></description>
+        <pubDate>Tue, 16 Jan 2018 00:00:00 +0100</pubDate>
+        <link>https://cmakara.github.io/posts/triggering-circleci-builds-from-tags</link>
+        <guid isPermaLink="true">https://cmakara.github.io/posts/triggering-circleci-builds-from-tags</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Testing errors in async functions with Chai</title>
+        <description></description>
+        <pubDate>Tue, 16 Jan 2018 00:00:00 +0100</pubDate>
+        <link>https://cmakara.github.io/posts/testing-errors-in-async-functions-with-chai</link>
+        <guid isPermaLink="true">https://cmakara.github.io/posts/testing-errors-in-async-functions-with-chai</guid>
+      </item>
+    
+      <item>
+        <title>Model based test automation - test cases</title>
+        <description></description>
+        <pubDate>Sun, 10 Jan 2016 00:00:00 +0100</pubDate>
+        <link>https://cmakara.github.io/posts/model-based-test-automation-test-cases</link>
+        <guid isPermaLink="true">https://cmakara.github.io/posts/model-based-test-automation-test-cases</guid>
+      </item>
+    
+      <item>
+        <title>Model based test automation - principles</title>
+        <description></description>
+        <pubDate>Sat, 09 Jan 2016 00:00:00 +0100</pubDate>
+        <link>https://cmakara.github.io/posts/model-based-test-automation-principles</link>
+        <guid isPermaLink="true">https://cmakara.github.io/posts/model-based-test-automation-principles</guid>
+      </item>
+    
+      <item>
+        <title>Usage of the &quot;var&quot; keyword in C#</title>
+        <description></description>
+        <pubDate>Sat, 22 Feb 2014 00:00:00 +0100</pubDate>
+        <link>https://cmakara.github.io/posts/usage-of-the-var-keyword-in-csharp</link>
+        <guid isPermaLink="true">https://cmakara.github.io/posts/usage-of-the-var-keyword-in-csharp</guid>
+      </item>
+    
+      <item>
+        <title>How to set AutomationId for TreeViewItems in WPF</title>
+        <description></description>
+        <pubDate>Sat, 22 Feb 2014 00:00:00 +0100</pubDate>
+        <link>https://cmakara.github.io/posts/how-to-set-automationid-for-treeviewitems-in-wpf</link>
+        <guid isPermaLink="true">https://cmakara.github.io/posts/how-to-set-automationid-for-treeviewitems-in-wpf</guid>
+      </item>
+    
   </channel>
 </rss>
