@@ -1,3 +1,5 @@
 # These are supported funding model platforms
 
-custom: ['https://netlify.com']
+
+github: [netlify]
+custom: ['https://heykapil.in']
