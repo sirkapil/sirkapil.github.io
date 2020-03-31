@@ -1,7 +1,7 @@
-blog_theme: gray-yellow
-name: cmakara
+blog_theme: light
+name: Kapil
 paginate: 10
-url: https://cmakara.github.io
+url: https://sirkapil.github.io
 
 about_enabled: true
 # discus_identifier:
@@ -10,9 +10,9 @@ local_fonts: false
 rss_enabled: true
 scrollappear_enabled: true
 social:
-  github: cmakara
-  linkedin: csabamakara
-  email: csaba.makara@booom.studio
+  github: sirkapil
+  linkedin: 
+  email: 
 
 assets:
   plugins:
